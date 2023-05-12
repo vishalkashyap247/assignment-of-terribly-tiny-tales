@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/assignment-of-terribly-tiny-tales/static/css/main.e7871c74.css",
+    "main.js": "/assignment-of-terribly-tiny-tales/static/js/main.bc630bbc.js",
+    "static/js/787.547a2ec7.chunk.js": "/assignment-of-terribly-tiny-tales/static/js/787.547a2ec7.chunk.js",
+    "index.html": "/assignment-of-terribly-tiny-tales/index.html",
+    "main.e7871c74.css.map": "/assignment-of-terribly-tiny-tales/static/css/main.e7871c74.css.map",
+    "main.bc630bbc.js.map": "/assignment-of-terribly-tiny-tales/static/js/main.bc630bbc.js.map",
+    "787.547a2ec7.chunk.js.map": "/assignment-of-terribly-tiny-tales/static/js/787.547a2ec7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7871c74.css",
+    "static/js/main.bc630bbc.js"
+  ]
+}
