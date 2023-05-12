@@ -1,0 +1,33 @@
+.bar {
+  fill: rgb(64, 64, 64);
+}
+
+.label {
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+.x-axis text {
+    font-size: 12px;
+    transform: rotate(-90deg);
+    transform-origin: 13px 30px;
+    text-anchor: start;
+    z-index: 2;
+    text-align: right;
+  }
+  
+
+.y-axis text {
+  font-size: 12px;
+}
+
+.x-label {
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.y-label {
+  font-size: 16px;
+  text-anchor: middle;
+  transform: rotate(-90deg);
+}
