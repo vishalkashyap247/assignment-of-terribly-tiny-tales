@@ -1,6 +1,44 @@
 # Getting Started with Create React App
 ### working link : https://vishalkashyap247.github.io/assignment-of-terribly-tiny-tales/
-readme will soon update, Thankyou
+
+---
+
+## `App.js`
+This file serves as the main entry point and central control for the application. It manages the overall structure and functionality of the user interface.
+
+- `handleClick`: When the user clicks the "Fetch data" button, this function is triggered. It performs an asynchronous operation to fetch a text file from a specific URL. Once the text file is retrieved, it is parsed to extract individual words, and a histogram is built based on the word frequencies. The resulting histogram data is then set as the application's state, triggering a re-render to display the histogram on the screen.
+- `handleExport`: When the user clicks the "Export" button, this function is triggered. It converts the histogram data into a CSV (Comma-Separated Values) format, which is commonly used for spreadsheet files. The CSV data is then saved as a file with the name "histogram.csv", allowing the user to download and save the histogram data.
+- `convertToCSV`: This utility function takes the histogram data and converts it into a CSV string. It creates rows of data, where each row consists of a word and its corresponding frequency, separated by commas. The rows are then joined together with newline characters to form the final CSV string.
+
+---
+
+## `api.js`
+This file contains a utility function for making HTTP requests to fetch a text file from a specified URL.
+
+- `fetchTextFile`: This function takes a URL as input and uses the `fetch` function to send a request to that URL. It retrieves the text content of the file from the server's response and returns it as a string.
+
+---
+
+## `Histogram.js`
+This file defines a reusable React component for rendering a histogram chart based on provided data.
+
+- The `Histogram` component receives the histogram data, along with optional labels for the x-axis and y-axis, as props.
+- Inside the component, the D3.js library is used to calculate the necessary dimensions and scales for rendering the histogram.
+- The component then uses D3.js to select the SVG (Scalable Vector Graphics) element and render the histogram chart within it.
+- The chart is composed of bars, where each bar represents a word from the data. The height of each bar is determined by the frequency of the corresponding word.
+- The x-axis and y-axis are also generated and labeled based on the provided data and labels.
+- The resulting histogram chart is displayed on the screen as an SVG image.
+
+---
+
+## `utils.js`
+This file contains utility functions that are used for various data processing tasks.
+
+- `fetchTextFile`: This function is similar to the one in `api.js`. It takes a URL as input and uses the `fetch` function to retrieve the content of a text file from that URL. The content is then returned as a string.
+- `parseText`: This function takes a string of text as input and extracts individual words from it. It converts the text to lowercase and uses a regular expression to find and extract alphabetic words.
+- `buildHistogramData`: This function takes an array of words and calculates the frequency of each word. It creates a frequency map where each word is associated with its count. The map is then sorted based on the counts, and the top `limit` number of entries are extracted and returned as histogram data.
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
